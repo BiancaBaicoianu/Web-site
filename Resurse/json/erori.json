@@ -1,0 +1,25 @@
+{
+    "cale_baza": "Resurse/Imagini/erori",
+    "erori": [
+        {
+            "identificator":404,
+            "titlu":"404: Pagina nu a fost găsită!",
+            "text": "Ops! Se pare că mobila noastră nu se potrivește cu această pagină, bine că se potrivește cerințelor tale! Mai încearcă o dată!",
+            "imagine":"404.png"
+        },
+        {
+            "identificator":403,
+            "titlu":"403: Accesul nu este permis!",
+            "text": "Zona accesată este restricționată pentru anumiți utilizatori!",
+            "imagine":"403.png"
+        },
+        
+        {
+            "identificator":1,
+            "titlu":"Site în lucru",
+            "text": "Vom reveni în cel mai scurt timp!",
+            "imagine":"interzis.png"
+        }
+    ]
+  }
+  

@@ -1,0 +1,71 @@
+{
+	"cale_galerie":"Resurse/Imagini/Galerie",
+	"imagini": [
+		{
+			"cale_fisier":"Bucatarie2.png",
+			"titlu":"Mobilă de bucătărie",
+			"text_descriere": "Cine nu-și dorește o bucătărie care să iasă în evidență? Vă prezentăm un corp de bucătărie contrastand, care îmbină nuanțe glaciare cu cele calde!",
+			"anotimp": "iarna"
+		},
+		{
+			"cale_fisier":"Bucatarie14.png",
+			"titlu":"Mobilă de bucătărie",
+			"text_descriere": "Eleganța și rafinamentul impresionează până și cel mai mofturos musafir. Preparatele culinare inedite au nevoie de o bucătărie aparte. Noi ți-o oferim acum!",
+			"anotimp": "iarna"
+		},
+		{
+			"cale_fisier":"Dulap2222.png",
+			"titlu":"Dulap decorativ",
+			"text_descriere": "Hainele nu mai sunt demult doar o necesitate, așa că spațiul lor de depozitare trebuie să se adapteze volumului și diversității acestora. De asemenea, toți membrii familiei trebuie să beneficieze de spațiul lor pentru haine, așa că vă prezentăm o variantă de dressing spațios și bine compartimentat.",
+			"anotimp": "iarna"
+		},
+		{
+			"cale_fisier":"Living1.png",
+			"titlu":"Mobilă living",
+			"text_descriere": "Living-ul este cartea dumneavoastră de vizită, dar și locul unde familia se reunește să petreacă timp de calitate împreună, așa că trebuie să corespundă tuturor gusturilor și să fie de o calitate superioară.",
+			"anotimp": "iarna"
+		},
+		{
+			"cale_fisier":"Bucatarie6.png",
+			"titlu":"Mobilă de bucătărie",
+			"text_descriere": "Ești o fire conservatoare și vrei să rămâi în tiparele societății? Acest corp de bucătărie este practic și elegant, cu siguranță te va cuceri din prima.",
+			"anotimp": "iarna"
+		},
+		{
+			"cale_fisier":"Bucatarie8.png",
+			"titlu":"Mobilă de bucătărie",
+			"text_descriere": "La fel ca dumneavoastră, vrem să valorificăm tot spațiul pe care îl avem la dispoziție, iar acest corp de bucătărie este soluția pentru spațiile mici!",
+			"anotimp": "iarna"
+		},
+		{
+			"cale_fisier":"Bucatarie13.png",
+			"titlu":"Mobilă de bucătărie",
+			"text_descriere": "Dacă și ție îți place să ai totul pus la punct până în cel mai mic detaliu, aruncă o privire la acest corp de bucătprie foarte bine compartimentat, cu un aspect inovativ și o îmbinare cromatică modernă!",
+			"anotimp": "iarna"
+		},
+        {
+			"cale_fisier":"Dulap3.png",
+			"titlu":"Dulap încorporat",
+			"text_descriere": "Dacă v-ați pus vreodată problema spațiului de depozitare, aflați că venim cu o soluție practică și cu un design inovator. Dulapul încorporat poate fi plasat sub scara interioară, completând perfect acel spațiu lipsit anterior de utilitate.",
+			"anotimp": "iarna"
+		},
+		{
+			"cale_fisier":"Bucatarie10.png",
+			"titlu":"Corp de bucătărie",
+			"text_descriere": "Dacă simplitatea a fost dintotdeauna pe gustul tău, atunci îți prezentăm un concept clasic, dar spațios, perfectă de integrat bucătăriilor de la bloc!",
+			"anotimp": "iarna"
+		},
+		{
+			"cale_fisier":"Dulap1.png",
+			"titlu":"Dulap cu oglindă",
+			"text_descriere": "«Nu poți ieși în lume orișicum!» Dulapul cu oglindă te ajută să te pregătești pentru orice ieșire din casă!",
+			"anotimp": "iarna"
+		},
+		{
+			"cale_fisier":"Dulap22.jpeg",
+			"titlu":"Dulap compartimentat",
+			"text_descriere": "Spațiul este uneori inamicul nostru, haideți să schimbăm asta împreună!",
+			"anotimp": "iarna"
+		}
+	]
+}

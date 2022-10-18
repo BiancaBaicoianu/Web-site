@@ -1,0 +1,179 @@
+$transformare_i:scale(0,0) !default;
+$transformare_f:scale(1,1) !default;
+$setare-server:black !default;
+$nrimag: 9 !default;
+
+ .galerie-a{
+	width:400px;
+	height:300px;
+	border:4px inset $setare-server;
+	border: 10px solid transparent;
+	margin-left: auto;
+	margin-right: auto;
+	border-image: url('/Resurse/Imagini/border1.png') 50 round;
+	position:relative;
+	overflow:hidden;
+	margin-bottom:5rem;
+}
+
+// descrierea fotografiilor va aparea pe un bordero in partea de jos
+.galerie-a figcaption{
+	position:absolute;
+	bottom:0;
+	background:rgba(255,255,255,0.7);
+	width:100%;
+	text-align:center;
+}
+
+.galerie-a figure{
+	position:relative;
+	padding: 0;
+	margin: 0;
+	width:400px;
+	height:300px;
+}
+
+#galerie-animata .grid_3col{
+	display:grid;
+	width:1200px;
+	grid-template-columns: 400px 400px 400px;
+	grid-template-rows: 300px 300px 300px;
+	grid-row-gap:0;
+	grid-column-gap:0;
+	position:absolute;
+	top:0;
+	left:0;
+	animation-name: galerie-animata;
+	animation-direction:alternate;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+	animation-fill-mode:forwards;
+	animation-duration:28s;	
+	transform-origin:center center;
+  }
+ 
+  #galerie-animata figure{
+	height:300px;
+	position:relative;
+	overflow:hidden;
+  }
+  #galerie-animata figure:hover{
+	animation-play-state: paused;
+}
+
+//   #galerie-animata img{
+// 	height:100%;
+//   }
+
+
+#galerie-animata figure:nth-of-type(1){
+	animation-delay:0s;
+}
+#galerie-animata figure:nth-of-type(3){
+	animation-delay:3s;
+}
+#galerie-animata figure:nth-of-type(2){
+	animation-delay:6s;
+}
+#galerie-animata figure:nth-of-type(7){
+	animation-delay:9s;
+}
+#galerie-animata figure:nth-of-type(4){
+	animation-delay:12s;
+}
+#galerie-animata figure:nth-of-type(5){
+	animation-delay:15s;
+}
+#galerie-animata figure:nth-of-type(9){
+	animation-delay:18s;
+}
+#galerie-animata figure:nth-of-type(8){
+	animation-delay:21s;
+}
+#galerie-animata figure:nth-of-type(6){
+	animation-delay:24s;
+}
+
+// @keyframes galerie{ 
+// 	0% {z-index:10;opacity:1;} /*perioada 0-5% in care se afiseaza fara efect */
+// 	7.142857% {transform:$transformare_i;} /*transformare inceput disparitie*/
+// 	12%{opacity:1;} /* de  aici doresc sa descresc si opacitatea;*/
+// 	14.285714%{z-index:10;opacity:0;transform:$transformare_f;}
+// 	14.285715%{z-index:-10; transform:$transformare_i;}/* il ascund cat mai in spate sa nu vina peste imaginile care erau mai sus in html decat el*/
+	
+// 	85.714287%{opacity:0;transform:$transformare_i;z-index:-10;}	
+// 	85.714288%{z-index:0;}/*setez z-index la 0 ca sa revina la ordinea normala de afisare*/
+// 	100%{opacity:1;z-index:0;}
+//}
+
+@keyframes galerie-animata{
+	0%{
+		top:0px;
+		left:0;
+		//zoom in poza 1
+		// z-index:10;
+		// opacity:1;
+	  }
+	15.67%{
+	  top:-300px;
+	  left:0;
+	//   transform: $transformare_i;
+	}
+	16.67%{ 
+	  top:-300px;
+	  left:0;
+	//   transform: $transformare_f;
+	}
+	32.33%{
+	  top:-300px;
+	  left:-400px;
+	}
+	33.33%{
+	  top:-300px;
+	  left:-400px;
+	}
+	49%{
+	  top:0px;
+	  left:-400px;
+	}
+	50%{
+	  top:0px;
+	  left:-400px;
+	}
+	65.67%{
+	  top:-600px;
+	  left:-400px;
+	}
+	66.67%{
+	  top:-600px;
+	  left:-400px;
+	}
+	82.33%{
+	  top:-600px;
+	  left:0px;
+	}
+	83.33%{
+	  top:-600px;
+	  left:0px;
+	}
+	99%{
+	  top:-900px;
+	  left:0px;
+	}
+	100%{
+	  top:-900px;
+	  left:0px;
+	}
+  }
+
+@media screen and (max-width:700px){
+	#galerie-animata{
+		display: none;
+	}
+}
+
+@media screen and (max-width:500px){
+	#galerie-animata{
+		display: none;
+	}
+}

@@ -1,0 +1,85 @@
+body{
+	--inaltime-meniu: 30px 
+	--inaltime-buton: 30px 
+	--culoare-maro: #6E4C2B 
+	--culoare-maro-deschis: #ba8149 
+	--culoare-maro-inchis: #6E4C2B 
+}
+nav 
+	position: sticky 
+
+	ul
+	&.meniu 
+		display: flex 
+		padding: 0px 
+		margin: var(--culoare-maro-inchis) 
+		text-align: center 
+		font-weight: bold 
+		z-index: 20px 
+		position: relative 
+		background-color: var(--culoare-maro-deschis) 
+		& > li 
+			&:hover 
+				& > ul 
+					&.submeniu 
+						display: block 
+				&::after 
+					opacity: 1 
+			&::after 
+				display: block 
+				position: absolute 
+				opacity: 0 
+				left: 0% 
+				transition: all 0.7s 
+				bottom: 0% 
+				width: 100% 
+				height: 7px 
+				content: " " 
+				background-image: linear-gradient(to left, white,var(--culoare-maro-deschis)) 
+			& > ul 
+				& > li 
+					a 
+						&:hover 
+							background-color: var(--culoare-maro-inchis) 
+							color: var(--culoare-maro-deschis) 
+		li 
+			width: 100px 
+			list-style-type: none 
+			padding: 0 
+			position: relative 
+			margin: 0 
+			height: var(--inaltime-buton) 
+			text-align: center 
+			a 
+				display: block 
+				width: 100% 
+				height: var(--inaltime-buton) 
+				text-decoration: none 
+				text-align: center 
+				font-weight: bold 
+				color: var(--culoare-maro-inchis) 
+	&.submeniu 
+		padding: 0 
+		margin: 0 
+		display: none 
+		z-index: 10px 
+		position: absolute 
+		background-color: var(--culoare-maro-deschis) 
+		animation-name: animatie-submeniu 
+		animation-timing-function: linear 
+		animation-duration: 0.3s 
+		animation-iteration-count: 1 
+#hamburger 
+	display: none 
+	height: var(--inaltime-meniu) 
+	img 
+		height: 100% 
+		width: auto 
+#ch-menu 
+	display: none 
+@keyframes 
+	animatie-submeniu 
+		0%
+        transform: scale(1, 0) 
+	100% 
+		transform: scale(1,1) 
