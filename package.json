@@ -1,0 +1,46 @@
+{
+  "name": "proiect-tw",
+  "version": "1.0.0",
+  "description": "Site care comercializează mobilă de înaltă calitate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mobila",
+    "lemn",
+    "dulap",
+    "bucatarie",
+    "masuta",
+    "living"
+  ],
+  "author": "Alexandra-Bianca Baicoianu",
+  "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "formidable": "^2.0.1",
+    "helmet": "^5.1.0",
+    "html-pdf-node": "^1.0.8",
+    "html-to-pdf": "^0.1.11",
+    "ip-location": "^1.0.1",
+    "juice": "^8.0.0",
+    "mongodb": "^4.6.0",
+    "node-iplocate": "^1.0.3",
+    "nodemailer": "^6.7.3",
+    "pg": "^8.7.3",
+    "qrcode": "^1.5.0",
+    "request": "^2.88.2",
+    "sass": "^1.49.11",
+    "satelize": "^0.2.0",
+    "session": "^0.1.0",
+    "sharp": "^0.30.3",
+    "socket.io": "^4.5.1",
+    "xml-js": "^1.6.11"
+  }
+}
