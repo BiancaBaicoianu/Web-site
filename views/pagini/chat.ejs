@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Dobal Design realizează pe comandă obiecte de mobilier exact pe gustul dumneavoastră, cu livrare în țară și posibilitatea de plată online.">
+        <meta name="keywords" content="mobilă, lemn, lemn masiv, mahon, pin, cires, mesteacăn, arțar, brad, tec, stejar, dulap, pat, comodă, birou, grădină, măsuță de cafea, eucalipt, salcâm, foioase, dressing, PAL, MFA, comodă, raft, living, bucătărie">
+        <link rel="stylesheet" href="/Resurse/CSS/chat.css" type="text/css" />
+        <script type="text/javascript" src="/Resurse/client-dist/socket.io.js"></script>
+        <script src="/Resurse/js/chat.js"></script>
+        
+        <%- include("../fragmente/head") %> 
+        
+        <title>Dobal Design - chat</title>
+        
+
+
+    </script> 
+
+    </head>
+
+    <body>
+        <div id="grad">
+    <%- include("../fragmente/header") %>
+
+    <main>
+        <p>Bine ai venit pe pagina de chat! Aici poți intra în contact cu persoane interesate de mobilă, așa ca tine. Puteți schimba păreri și vă puteți împărtăsi experiențele!</p>
+        <p><i>Nu uitați că nu există restricție de vârstă pe site, așa că orice comentariu postat poate ajunge cu ușurință la orice categorie de persoane, implicit la minori.<b> Vă rugăm să folosiți un limbaj adecvat și să nu adresați injurii!</b></i></p>
+        <div id="chat">
+			<div id="mesaje_chat">
+			</div>
+			<label>
+			Nume: <input type="text" id="nume" name="nume" value="">
+			</label><br/>
+			<label>
+			Mesaj: <textarea id="mesaj" name="mesaj" value=""></textarea>
+			</label><br/>
+            <label for="size">Dimensiune font
+                <input type="range" id="size" name="size" min="10" max="16" value="12" step="2">
+                <span id="infoRange">(10)</span></label>
+            <br/>
+
+			<button onclick="trimite()">Trimite</button>
+		</div>
+
+    </main>
+
+    <%- include("../fragmente/footer") %>
+        </div>
+    </body>
+</html>
+
+
+
+
+

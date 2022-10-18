@@ -1,0 +1,524 @@
+<!DOCTYPE html>  <!--versiunea html folosita-->
+<html lang="ro">
+    <head>
+        <meta name="description" content="Dobal Design realizează pe comandă obiecte de mobilier exact pe gustul dumneavoastră, cu livrare în țară și posibilitatea de plată online.">
+        <meta name="keywords" content="mobilă, lemn, lemn masiv, mahon, pin, cires, mesteacăn, arțar, brad, tec, stejar, dulap, pat, comodă, birou, grădină, măsuță de cafea, eucalipt, salcâm, foioase, dressing, PAL, MFA, comodă, raft, living, bucătărie">
+        <!--defineste cuvintele cheie pentru motoarele de cautare-->
+        <title>Dobal Design </title> 
+        <!--titlul, apare in partea de sus-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+        <%- include("../fragmente/head.ejs");%>
+
+        <meta name="author" content="Baicoianu Alexandra-Bianca">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!--viewport controleaza marimea-->
+
+        <!--font Awesome-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <script src="https://kit.fontawesome.com/6ed1d68ae2.js" crossorigin="anonymous"></script>
+
+        <!--boostrap-->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+        <!-- codul js pentru tooltip de la hover_text pentru iconul cu ușiță-->
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();   
+            });
+        </script>
+       
+    </head>
+
+    <body>
+
+        <p id="watermark"></p> <!--watermark-->
+        <p id="absolut"></p> <!--banner-->
+
+        <div id="grad"> <!--div pentru gradientul de fundal-->
+        <%- include("../fragmente/header") %>
+
+    <main>
+        
+    <p> <%- locals.ip %></p>
+
+        <div id="grid-pagina">
+
+            <section id="despre_noi">
+                <h2>Cine suntem noi?</h2>
+                <p>Suntem o echipă dornică să vină în ajutorul dumneavoastră, satisfăcând cele mai neașteptate dorințe în materie de mobilier. Clienții sunt prioritatea noastră, așa că principalul scop este să îmbinăm utilitatea cu inovația. Am realizat modele complexe, atât după schițele clienților, cât și modele proprii.  </p>
+                
+                <p>Dacă sunteți concentrați asupra unui model, nu ezitați să ne aratați imagini, schițe cu ceea ce vă place, dar și cu ce nu vă doriți să semene rezultatul final. Totodată, deși vrem să corespundem așteptărilor inițiale, trebuie să știți că anumite cerințe nu sunt practice sau durabile, așa că vă vom propune ajustări, decizia finală rămâne, bineînțeles, a dumneavoastră. În continuare vă îndemna să consultați diverse link-uri cu sfaturi privind mobilarea casei: </p>
+
+                <aside> <!--defineste un continut "aside" de restul paginii-->
+                    <!--link uri către paginile externe-->
+                    <a href="https://www.sensodays.ro/blog/amenajare-casa-reguli-si-idei-de-design-pentru-amenajarea-casei-tale/" target="_blank">Amenajare casă: reguli și idei de design |</a>
+                    <a href="https://www.elvila.ro/ghidul-decorarii-casei-pentru-incepatori-sfaturi-esentiale-de-la-profesionisti-pentru-un-decor-de-revista/" target="_blank"> Ghidul decorării casei pentru începători |</a>
+                    <a href="https://ro.planeta-design.com/6637483-how-to-furnish-a-small-house-tricks-and-secrets" target="_blank"> Cum să mobilezi o casă mică: sfaturi și trucuri</a>
+                </aside>
+                <br><br>
+                <!-----------------------------BOOTSTRAP CAROUSEL----------------------------------->
+
+                <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
+                      <!-- Indicators -->
+                    <!-- <ol class="carousel-indicators">
+                        <% for (let i = 0; i < 5; i++) { %>
+                        <li data-target="#myCarousel" data-slide-to="<%= i %>"></li>
+                        <% } %>
+                    </ol> -->
+                    <!-- Wrapper for slides -->
+                    <!-- <div class="carousel-inner">
+                        <% for (let i = 0; i < 5; i++) { %>
+                            <div class="item active">
+                                <img src="<%-locals.imagini[i].mare %>" alt="<%- locals.imagini[i].titlu %>" />
+                                
+                                <div class="carousel-caption">
+                                    <%- locals.imagini[i].titlu %>
+                                    <br>
+                                    <%- locals.imagini[i].text_descriere %>
+                                </div>
+                            </div>
+                                <% } %>
+                    </div> -->
+
+                      <!-- Left and right controls -->
+                      <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Înapoi</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Înainte</span>
+                      </a>
+                    </div> -->
+                  
+                <br><br>
+                <!------------------------------------------------flexbox--------------------------------------->
+                <div class="ifrVideos">
+                    <iframe src="https://www.youtube.com/embed/lcj59JH-3O0" name="ifr" width="560" height="315"></iframe>
+                    <div class="tabs">
+                        <a href="https://www.youtube.com/embed/lcj59JH-3O0" target="ifr">Cum să-ți proiectezi propria mobilă? </a> 
+                        <a href="https://www.youtube.com/embed/Bd4oDjElZV8" target="ifr"> De la concept la design </a>
+                    </div>
+                </div>
+                
+                <br><br>
+
+            <!---------------------------------------------------- Video VTT ------------------------------------->
+            <div id="vtt">
+                <!-- poster; imagine care apare inițial pentru video -->
+                <video controls poster="/Resurse/Imagini/mobila1.jpeg" style="width: 70%;">  
+                    <!-- mai multe surse pentru video; mp4 și ogv  -->
+                    <source src="/Resurse/Video/mobila.mp4" type="video/mp4">
+                    <source src="/Resurse/Video/mobila.ogv" type="video/ogv">
+                    <!--subtitrari; default vor fi cele in romana-->
+                    <track default src="/Resurse/Video/tracks/mesaje_ro.vtt" kind="captions" srclang="ro" label="romana" />
+                    <track src="/Resurse/Video/tracks/mesaje_en.vtt" kind="captions" srclang="en" label="engleza" />
+                </video>
+            </div>
+
+                <p>Pentru a consulta promoția noastră, apăsați imaginea de mai jos:<p>
+                    <!-- link download->pdf -->
+                    <a href="Resurse/pdf/Oferte.pdf" download="Promotii">
+                        <img src="Resurse/Imagini/Sales.jpg" alt="Promotii" width="145" height="145">
+                    </a>
+                    <br><br>
+
+                <section id="intrebari">
+                    <h2>Întrebări frecvente</h2>
+                    <details> <!--text aditional care apare/dispare cand utilizatorul acceseaza <summary>-->
+                        <summary>Cum pot anula o comandă?</summary> <!---text vizibil pentru sectiunea <details>-->
+                        <p>Puteți oricând anula o comandă în primele 48h de la plasarea acesteia, contactându-ne la orice modalitate de contact. </p>
+                    </details>
+                    <details>
+                        <summary>Realizați comenzi după schița proprie?</summary>
+                        <p>Da, chiar dacă modelul dorit nu se regăsește pe site, ne puteți prezenta orice schiță și vom face tot ce putem ca modelul dorit să prindă contur.</p>
+                    </details>
+                    <details>
+                        <summary>Asigurați livrarea în toată țara indiferent de valoare comenzii?</summary>
+                        <p> Așa cum am menționat în secțiunea <a href="#tabel">Livrare</a>, transportul este asigurat gratuit în București, iar pentru celelalte județe, consultați tabelul de prețuri.</p>
+                    </details>
+                </section>
+
+            </section>
+            <section id="utilizatori">
+                <h2>Utilizatori</h2>
+                <p>Media de vârstă a utilizatorilor este de 35 ani, iar cel mai mare procent din clienții care s-au înregistrat pe site lucrează în sectorul finanțe-bănci!</p>
+            </section>
+            <section id="statistic">
+                <h2>Statistica</h2>
+                <p>Aceasta este statistica privind numărul comenzilor online din prima jumătate a lunii curente.</p>
+                <canvas id="myChart" style="width:80%;max-width:500px"></canvas>
+
+<script>
+var xyValues = [
+  {x:50, y:7},
+  {x:60, y:8},
+  {x:70, y:8},
+  {x:80, y:9},
+  {x:90, y:9},
+  {x:100, y:9},
+  {x:110, y:10},
+  {x:120, y:11},
+  {x:130, y:14},
+  {x:140, y:14},
+  {x:150, y:15}
+];
+
+new Chart("myChart", {
+  type: "scatter",
+  data: {
+    datasets: [{
+      pointRadius: 4,
+      pointBackgroundColor: "rgb(0,0,0)",
+      data: xyValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      xAxes: [{ticks: {min: 40, max:160}}],
+      yAxes: [{ticks: {min: 6, max:16}}],
+    }
+  }
+});
+</script>
+
+                </section>
+            <section id="server">
+                <h2>Date & Server</h2>
+                <%
+                dataServer = new Date();    
+                sirData = dataServer.getHours()+":"+dataServer.getMinutes()+":"+dataServer.getSeconds()
+                %>
+                <p>Ora server:<span id = "data_server"><%= sirData %></span></p>
+                <p>Ora client:<span id = "data_client"></span></p>
+                <script>
+                    //aranjeaza formatul pentru 00, 01, 02....
+                    function zero(nr){
+                        if (nr < 10) return "0"+nr;
+                        return nr;
+                    }
+                    
+                    d=new Date()
+                    document.getElementById("data_client").innerHTML=zero(d.getHours())+":"+zero(d.getMinutes())+":"+zero(d.getSeconds());
+
+                    function actualizeazaElemData(id_div){
+                        var data_div = document.getElementById(id_div);
+                        if (data_div.innerHTML!="")
+                        {
+                            var timp=data_div.innerHTML.split(":")
+                            var dt=new Date(2000,1,15, timp[0],timp[1], timp[2] );
+                            //nu conteaza data (am pus valori random pentru an, luna si zi) ci timpul
+                        }
+                        else
+                            var dt=new Date();
+                        dt.setSeconds(dt.getSeconds()+1)
+                        data_div.innerHTML=zero(dt.getHours())+":"+zero(dt.getMinutes())+":"+zero(dt.getSeconds());
+                    }
+                    function actualizeazaData(){
+                        actualizeazaElemData("data_client");
+                        actualizeazaElemData("data_server");
+                    }
+                    actualizeazaData()
+                    setInterval(actualizeazaData,1000)
+                </script>
+                
+            </section>
+            <section id="calendar">
+                <h2>Calendar</h2>
+
+                <table style="height:200px;">
+                    <tr>
+                        <td>08 martie</td>
+                        <td>Last sales la dressing-uri și comodele cu oglindă special pentru clientele noastre</td>
+                    </tr>
+                    <tr>
+                        <td>01-05 septembrie</td>
+                        <td>Black Week la început de toamnă cu reduceri de până la 60%</td>
+                    </tr>
+                    <tr>
+                        <td>01 decembrie</td>
+                        <td>Sărbătorim împreună românește la Târgul de mobilă Dobal Design</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <script>
+                            function getMonday() {
+                                var d = new Date(),
+                                    month = d.getMonth(),
+                                    mondays= [];
+                            
+                                d.setDate(1);
+                            
+                                // Get the first Monday in the month
+                                while (d.getDay() !== 1) {
+                                    d.setDate(d.getDate() + 1);
+                                }
+                            
+                                // Get all the other Mondays in the month
+                                while (d.getMonth() === month) {
+                                    mondays.push(new Date(d.getTime()));
+                                    d.setDate(d.getDate() + 7);
+                                }
+                            
+                                return mondays[0];
+                            }
+                            zi = getMonday();
+
+                            const month = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+                            var dd = String(zi.getDate()).padStart(2, '0');
+                            var mm = month[(zi.getMonth())]; 
+
+                            z = dd + ' ' + mm;
+                            document.write(z);
+                        </script>
+                        </td>
+                        <td><i>Reducerea de început</i>-15% reducere la orice model 
+                            <small>*această zi se actualizează lunar; verificați site-ul periodic</small></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <script>
+                                function getSaturday() {
+                                    var d = new Date(),
+                                        month = d.getMonth(),
+                                        saturdays = [];
+                                
+                                    d.setDate(31);
+                                
+                                    // Get the first Saturday in the month
+                                    while (d.getDay() !== 6) {
+                                        d.setDate(d.getDate() - 1);
+                                    }
+                                
+                                    // Get all the other Saturdays in the month
+                                    while (d.getMonth() === month) {
+                                        saturdays.push(new Date(d.getTime()));
+                                        d.setDate(d.getDate() - 7);
+                                    }
+                                
+                                    return saturdays[0];
+                                }
+                                function getSaturday2() {
+                                    var d = new Date(),
+                                        month = d.getMonth(),
+                                        saturdays = [];
+                                
+                                    d.setDate(31);
+                                
+                                    // Get the first Saturday in the month
+                                    while (d.getDay() !== 6) {
+                                        d.setDate(d.getDate() - 1);
+                                    }
+                                
+                                    // Get all the other Saturdays in the month
+                                    while (d.getMonth() === month) {
+                                        saturdays.push(new Date(d.getTime()));
+                                        d.setDate(d.getDate() - 7);
+                                    }
+                                
+                                    return saturdays[1];
+                                }
+                                zi = getSaturday();
+                                zi2 = getSaturday2();
+                                
+                                var mm = month[(zi.getMonth())]; 
+    
+                                z1 = String(zi2.getDate()).padStart(2, '0') + '-' + String(zi2.getDate()+1).padStart(2, '0') + ', ' + String(zi.getDate()).padStart(2, '0') + '-' + String(zi.getDate()+1).padStart(2, '0') + ' '+ mm;
+                                document.write(z1);
+                            </script>
+                        </td>
+                        <td><i>Promoție de weekend</i>-15% reducere la corpurile de bucătărie
+                            <small>*aceste zile se actualizează lunar; verificați site-ul periodic</small></td>
+                    </tr>
+                </table>
+            
+            </section>
+            <section id="anunturi">
+                <h2>Anunțuri</h2>
+                <table style="height:200px;">
+                    <tr>
+                        <td>
+                            <time datetime="2022-03-08">8 martie 2022</time>
+                        </td>
+                        <td>
+                            <p><strong>S-au eliminat restricțiile privind purtarea măștii!</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <time datetime="2020-01-13">13 ianuarie 2020</time>
+                        </td>
+                        <td>
+                            <p>Dobal Design a realizat prima comandă de mobilă!</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <time datetime="2020-02-15">15 februarie 2020</time>
+                        </td>
+                        <td>
+                            <p>Începând cu această dată ne puteți găsi la adresa specificată în secțiunea contact!</p>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <time datetime="2020-04-02">02 aprilie 2020</time>
+                        </td>
+                        <td>
+                            <p>Ne extindem orașele în care facem livrări!</p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <time datetime="2020-06-16">16 iunie 2020</time>
+                        </td>
+                        <td>
+                            <p>Am adăugat modele moderne de mobilă de bucătărie! Aruncați un ochi!</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <time datetime="2021-01-01">1 ianuarie 2021</time>
+                        </td>
+                        <td>
+                            <p>De acum ne puteți găsi și pe Facebook, Instagram și TikTok!</p>
+                            <span class="fa-brands fa-facebook-f"></span><a href="https://www.facebook.com/groups/1994994237310158/?hoisted_section_header_type=recently_seen&multi_permalinks=2407254506084127">  Design Dobal</a>
+                            <span class="fa-brands fa-instagram"></span><a href="https://www.instagram.com/codeprompt/"> ddobal__</a>
+                            <span class="fab fa-tiktok"></span><a href="https://www.tiktok.com/ro-RO/">designDobal</a>
+            
+                        </td>
+                    </tr>
+                </table>
+        
+                </section>
+
+            <section id="diverse">
+                <hr/>
+                <h3>Informații generale</h3>
+                <p>Poate piesele centrale ale unei încăperi, obiectele de mobilier constituie deseori <i>magneții</i> care atrag musafiri în căminul tau. Însă, mai presus de toate aceste aspecte este calitatea mobilierului pe care îl alegi pentru livingul tau. Având în vedere că durata de viață a unei piese de mobilier de cea mai înalta calitate poate atinge și 15 ani, investiția va merita fără doar și poate. Materialul din care este confecționată aceasta este etalonul de calitate. 
+                <ul>
+                <li><b>Lemnul de mahon</b></li>
+                <p>Unul dintre principalele tipuri de lemn care sunt adesea folosite la fabricarea diverselor piese de mobilier este cel de <b>mahon</b>. Nuanțele sale de maro-roșcat și maro-deschis sunt preferate de mulți oameni și potrivite pentru <b>mobila din living</b>, pentru <b>măsuțele de cafea</b> sau chiar pentru diversele <b>dulapuri</b> ce au un rol atât decorativ cât și practic. Fiind un lemn de esență tare este și foarte rezistent la diverși factori externi care l-ar putea deteriora (zgâriere, îndoire, umflături, soare, umezeală etc.).Cel mai adesea, acest lemn tropical este folosit la fabricarea meselor din <b>living</b>, <b>dressing-urilor</b> si <b>dulapurilor</b>, deci pentru un tip de mobilier puțin mai scump dar de o calitate extrem de înaltă.</p>
+                <li><b>Lemnul de tec</b></li>
+                <p>Lemnul de tec are o densitate medie, este de esență tare și extrem de rezistent din mai multe puncte de vedere. Tocmai de aceea este unul dintre principalele tipuri de lemn utilizate pentru <b>mobila din living</b>. În antichitate, lemnul de tec era folosit în construcția bărcilor tocmai pentru că rezistă foarte bine la umiditate. Astăzi, pe lângă mobila din living, el este utilizat și la fabricarea mobilierului din ambarcațiunile de lux.Lemnul de tec are o frumusețe aparte, naturală, ceea ce îl face extrem de apreciat și căutat. Cu siguranță, mobila fabricată din acest tip de lemn va atrage toate privirile musafirilor tăi.</p>
+                <li><b>Lemnul de brad</b></li>
+                <p>Lemnul de brad este de esență moale și este apreciat pentru textura sa uniformă. De asemenea, mirosul specific al lemnului face piesele de mobilier să devină și mai speciale. Un lemn valoros, căutat, deși nu atât de rezistent ca altele, lemnul de brad se regăsește în componenta pieselor de mobilier pentru <b>living</b> datorită aspectului plăcut. Deci, dacă îți dorești un living aparte, înfrumusețat de obiecte speciale, trebuie să iei în considerare lemnul de brad.</p>
+                <li><b>Lemnul de stejar</b></li>
+                <p>Spre deosebire de celelalte tipuri de lemn prezentate, lemnul de stejar are o culoare deschisă și se pliază ușor, deși este un lemn de esență tare și durabil prin natura lui. Este cel mai des folosit în fabricarea de mobilă, în special mobila pentru <b>living</b>, deoarece are un aspect plăcut și este foarte rezistent. Nu este un secret faptul că lemnul de stejar este unul dintre cele mai populare și căutate în țara noastră. Porii săi creează niște forme deosebite, fapt ce face acest tip de lemn și mai dorit de către pasionații de mobilă. Deși impresia generală este că acest lemn conferă un aspect bătrânesc și învechit mobilei, acest lucru nu este adevărat. Lemnul de stejar este perfect pentru mobila din living și poate fi prelucrat într-un mod modern, în pas cu timpurile.</p>
+                </ul>
+                <p>Pentru dormitor, opțiunile principale sunt reprezentate de PAL, MDF sau lemn masiv, diferențele dintre acestea fiind:</p>
+                <ul>
+                    <li>Mobila de dormitor din <b>lemn masiv</b></li>
+                    <p>Mobila de dormitor din lemn masiv este considerată cea mai bună de pe piață, având ca cea mai bună calitate. Și din acest motiv este poate și cea mai scumpă mobilă pe care o poți găsi. Dacă vrei să cumperi o mobilă de dormitor care să reziste bine în timp, mobila din lemn masiv este ceea ce cauți.</p>
+                    <p>Mobila de dormitor din lemn masiv nu își pierde nici calitățile și nici aspectul cu trecerea anilor. Aceasta este rezistentă, este lucrată cu atenție și pricepere. <b>Stejar</b>, <b>cireș</b>, <b>arțar</b>, <b>pin</b>, <b>mesteacăn</b>, <b>mahon</b> sunt numai câteva exemple de tipuri de lemn utilizate pentru a fabrica mobilierul de dormitor din lemn masiv.</p>
+                    <li>Mobila de dormitor din <b>MDF</b> sau <b>PAL</b></li>
+                    <p>MDF-ul și PAL-ul sunt alternative mai ieftine lemnului masiv, acestea fiind materiale ce imită lemnul. Avantajele mobilei de dormitor realizată din MDF și PAL este ca o găsești la prețuri mult mai mici comparativ cu cea din lemn masiv. Însă, trebuie să punctăm și dezavantajele mobilei pentru dormitor din MDF sau PAL, și anume că nu rezistă la fel de bine în timp și nici nu are un aspect la fel de elegant precum cea din lemn masiv.</p>
+                </ul>
+                <p>În ceea ce privește <b>mobila de bucătărie</b>, se folosesc PAL melaminat, care este foarte ieftin şi imită destul de bine lemnul, sau mobilier din MDF. Acesta din urmă poate fi vopsit, mat sau lucios (în acest caz orice zgârietură va fi vizibilă) sau MDF acoperit de sticlă. Ultima este cea mai scumpă variantă, mai rezistentă, dar din acest material nu se pot realiza forme speciale, cum ar fi cele curbe. Lemnul masiv poate fi o soluţie bună, pentru că este un material tradiţional. Poate fi vopsit, dar în timp lemnul va fi afectat de schimbările de temperatură şi umezeală din bucătărie. Peste PAL sau MDF poate fi aplicat un strat de furnir, care va conferi un aspect frumos, care imită bine lemnul. Furnirul nu poate fi însă revopsit sau lăcuit. Pentru carcasa dulapului este bine să alegem PAL, nu lemn natural, chiar dacă dorim un stil clasic, Dulapurile din PAL sunt mai rezistente şi mai ieftine. Pentru o rezistenţă sporită la umezeală, acest PAL poate fi tratat cu o soluţie specială. Este bine ca pentru bucătărie să alegem un PAL de calitate, mai bine tratat decât cel destinat mobilei din restul casei.</p>
+                
+                <figure> <!--continut grafic-> imagini, diagrame etc.-->
+                    <img sizes="(min-width:1200px) 1200px, (min-width:650px) 600px, 300px"
+                        srcset="Resurse/Imagini/mobila1.jpeg 1200w, Resurse/Imagini/mobila1_mediu.jpeg 600w, Resurse/Imagini/mobila1_mic.jpeg 300w"
+                        alt="Imagine mobilă bucătărie">
+                    <figcaption>Mobilă bucătărie MDF</figcaption>  <!--descrierea pentru figure-->
+                </figure>
+
+                <p>Durata de viață a mobilierului de grădină depinde în mare măsură de tipul de lemn din care este confecționat. În general, lemnul de conifere tinde să se albăstrească și nu are o durată de viață atât de îndelungată ca lemnul de foioase. Din acest motiv, în special mobilierul din lemn de conifere amplasat afară trebuie pretratat cu un produs adecvat de protecție pentru lemn. Datorită densității sale mai mari, <b>lemnul de foioase</b> este mai rezistent împotriva dăunătorilor și necesită mai puțină îngrijire.</p>
+                <ul>
+                    <li>În trecut, mobilierul de grădină din lemn era confecționat deseori din lemn de conifere sau de fag lăcuit. Deoarece acest lemn este rezistent la intemperii numai dacă stratul de lac este intact, iar piesele de mobilier necesită o îngrijire intensivă, în ultimele decenii acest tip de mobilier a dispărut aproape complet de pe piață.</li>
+                    <li>În prezent, primele pe listă sunt esențele tropicale și subtropicale, de exemplu <b>lemnul de tec</b>, <b>lemnul de eucalipt</b>, <b>lemnul de salcâm</b>. Grație concentrației ridicate de uleiuri, aceste esențe de lemn sunt foarte rezistente la intemperii, mucegai și insecte și pot fi folosite în spații exterioare fără a necesita tratare.</li>
+                </ul>
+                <h2><strong>Instrucțiuni de întreținere</strong></h2>
+                <p>Pentru a menţine aspectul şi pentru a prelungi durata de viaţă a mobilierului te rugăm să iei în considerare instrucţiunile de mai jos.</p>
+                <ul>
+                    <li>Foloseşte doar agenţi de curăţare solubili în apă, produse care indică în mod expres că pot fi folosite pe finisaje din lemn.</li>
+                    <li>Foloseşte doar carpe moi, care nu zgârie, lavete din piele sau un burete moale de curăţat.</li>
+                    <li>Întotdeauna îndepărtează petele sau murdăria de pe mobilă cât mai repede cu putinţă.</li>
+                    <li>După curăţarea efectivă, întotdeauna şterge suprafeţele până când sunt complet uscate.</li>
+                    <li>Evitată că mobilierul să stea în umezeală.</li>
+                    <li>Aplică agenţi de curăţare diluaţi în funcţie de nivelul de murdărie (20% alcool sau 20% detergent şi 80% apă).</li>
+                    <li>Se vor evita agenţii de curăţare pe baza de acizi, amoniac, înălbitori sau abrazive.</li>
+                </ul>
+
+                <p><strong>Ce nu îți recomandăm să faci?</strong></p>
+                <ul>
+                    <li>Nu folosi solvenţi sau produse care conţin alcool.</li>
+                    <li>Nu folosi substanţe chimice dure (cum ar fi agenţi abrazivi sau solvenţi) pe fronturile bucătăriilor, indiferent dacă au finisaje mate sau lucioase.</li>
+                    <li>Prafurile de curăţat şi bureţii abrazivi din fibră de metal (sârmă) pot de asemenea să degradeze suprafeţele la un nivel ce nu poate fi reparat sau finisat. Prin urmare nu folosi aceste produse.</li>
+                </ul>
+
+            </section>    
+            
+            <section id="tabel">
+                <p>Dobal Design asigură costul livrării pentru comenzile din București și Ilfov. Pentru celelalte județe, consultați tabelul de prețuri de mai jos.</p>
+                <br>
+                
+                <div class="tabel_scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- pe câte rânduri ar trebui să se extindă o celulă -->
+                            <th> Județ </th>
+                            <th> Cost prima comandă </th>
+                            <th> Cost livrare standard </th>
+                            <th> Cost livrare rapidă </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Brașov, Buzău, Călărași, Dâmbovița, Giurgiu, Ialomița, Prahova, Sibiu, Teleorman</td><td>15 lei</td><td><s>20 lei</s> <ins>15 lei</ins></td><td rowspan="5">100 lei</td></tr>
+                        <tr><td>Argeș, Brăila, Constanța, Covasna, Olt, Tulcea, Vâlcea, Vrancea</td><td>15 lei</td><td><s>30 lei</s><ins>20 lei</ins></td></tr>
+                        <tr><td>Alba, Bacău, Dolj, Galați, Gorj, Harghita, Hunedoara, Mehedinți, Mureș, Vaslui</td><td>15 lei</td><td><s>45 lei</s><ins>40 lei</ins></td></tr>
+                        <tr><td>Arad, Bihor, Bistrița-Năsăud, Caraș-Severin, Cluj, Iași, Timiș, Neamț</td><td>15 lei</td><td><s>60 lei</s> <ins>55 lei</ins></td></tr>
+                        <tr><td>Botoșani, Maramureș, Satu-Mare, Sălaj, Suceava</td><td>15 lei</td><td><s>65 lei</s> <ins>60 lei</ins></td></tr>  
+                    </tbody>
+                
+                    <!-- descrierea tabelului/ legendă -->
+                    <caption> -Detalii livrare- </caption>
+                </table>
+            </div>
+            </section>
+
+        </div>  
+        
+        <p> <%- locals.ip %></p>
+                
+                <!-- <% for (let prod of locals.produse){ %>
+                    <p><%- prod.nume%> <%- prod.pret %></p>
+                <% } %> -->
+                
+                <h2 id="favorite" style="text-align: center;"> Favoritele voastre</h2><br><br>
+            <section>
+                <%- include("../fragmente/galerie.ejs");%>
+            </section>
+
+                <br><br><br>
+
+                <div id="galerie-animata" class="galerie-a">
+                <div class="grid_3col">
+                    <% for (let imag of locals.imagini){  %>
+    
+                        <figure>
+                            <picture>
+                                <!-- il ia pe primul care se potriveste cu query-ul din media-->
+                                <source srcset="/<%-imag.mic%>" media="(max-width:700px)"/>
+                                <img src="/<%-imag.mare%>" alt="text"/>
+                            </picture>
+                            <figcaption><%-imag.titlu%></figcaption>
+                        </figure>
+                    <% } %>
+                </div>
+                </div>
+    </main>
+        <%- include("../fragmente/footer.ejs");%>
+        </div>
+    </body>
+
+</html>

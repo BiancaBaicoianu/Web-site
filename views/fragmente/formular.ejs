@@ -1,0 +1,57 @@
+<!-- chestii obligatorii in task -> required -->
+<form id="form_inreg"  method="post" class="date"  action="<%= locals.action %>"  enctype="multipart/form-data">
+    <p>
+        <label>
+            Username: <input type="text" name="username" id="inp-username" value="username<%= Math.floor(Math.random()*100000) %>" required pattern="[A-Za-z0-9]+"> <!--caractere permise A-Z, a-z și 0-9-->
+        </label>
+    </p>
+    <p>
+        <label>
+            Nume: <input type="text" name="nume" id="inp-nume"  value="Nume" >
+        </label>
+    </p>
+    <p>
+        <label>
+            Prenume: <input type="text" name="prenume" id="inp-prenume" value="Prenume"  >
+        </label>
+    </p>
+    <p>
+        <label>
+            Parola: <input id="parl" type="password" required  name="parola" value="">
+        </label>
+    </p>
+    <p id="p-reintrod">
+        <label >
+            Reintroduceti parola: <input id="rparl" required type="password" name="rparola" value="">
+        </label>
+    </p>
+    <p>
+        <label>
+            Email: <input type="text" name="email" id="inp-email" required value="numeprenume@gmail.com"  size="50">
+        </label>
+    </p>
+    <p>
+        <label>
+            Job: <select name="job" id="sel-job"><option value="Medic">Angajat domeniul medical</option>
+                <option value="Profesor">Angajat domeniul educației</option>
+                <option value="serv-publice">Angajat servicii publice</option>
+                <option value="ind-grea">Angajat industria grea</option>
+                <option value="ind-usoara">Angajat industria ușoară</option>
+                <option value="marketing">Angajat marketing și vânzări</option>
+                <option value="finante">Angajat domeniul finanțe-bănci</option>
+                <option value="inginerie">Angajat domeniul Inginerie/IT</option>
+                <option value="elev">Elev/student</option>
+                <option value="somer">Șomer</option>
+                <option value="Nu doresc să spun" selected>Nu doresc să spun</option></select>
+        </label>
+    </p>
+    <p>
+        <label>
+            Poza: <input type="file" name="poza">
+        </label>			
+    </p>
+    <p>		
+        <input type="submit" value="Trimite">
+        <input type="reset" value="Reseteaza">
+    </p>
+</form>

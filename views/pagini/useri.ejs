@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <!-- <link rel="stylesheet" href="/resurse/css/useri.css" type="text/css" /> -->
+        <title>Dobal Design - utilizatori</title>
+        <%- include("../fragmente/head") %>     
+        <script type="text/javascript" src=/Resurse/js/produse.js></script>
+    </head>
+    <body>
+		<div id="grad">
+    <%- include("../fragmente/header") %>
+    <main>
+    <div class="afisaj">
+        <h2>Useri</h2>
+		<table id="useri" style="margin-left:auto; margin-right: auto;">
+		  <tr>
+			<th>Id</th><th>Nume</th><th>Prenume</th><th>Username</th><th>Email</th><th>Șterge utilizator</th>
+		  </tr>
+
+		  <% for (var i = 0; i < useri.length; i++) { 
+				if(useri[i].rol=="comun"){
+				%>
+				<tr>
+				  <td><%= useri[i].id %></td>
+				  <td><%= useri[i].nume %></td>
+				  <td><%= useri[i].prenume %></td>
+				  <td><%= useri[i].username %></td>
+				  <td><%= useri[i].email %></td>
+				  <td>
+					<form id="sterge" method="post" action="/sterge_utiliz">
+						<label>
+							<input type="hidden" name="id_utiliz" value="<%= useri[i].id %>">
+						</label>
+						
+						<input type="submit" value="Șterge">
+					</form>
+				  </td>
+				</tr> 
+   
+				<% } %>			
+		  <% } %>
+		</table>
+		
+	</div>
+</main>
+
+    <%- include("../fragmente/footer") %>
+		</div>
+</body>
+</html>

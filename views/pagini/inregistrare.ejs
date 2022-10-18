@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+        <title>Dobal Design - înregistrare </title>
+        <%- include("../fragmente/head") %>     
+        <script type="text/javascript" src=/resurse/js/inregistrare.js></script>
+    </head>
+    <body>
+        <div id="grad">
+    <%- include("../fragmente/header") %>
+
+    <main>
+    <div class="afisaj">
+        <h1>Inregistrare utilizator</h1>
+        
+		<% if(!locals.raspuns){ %>
+
+			<%-include("../fragmente/formular", {action: "/inreg"}) %>
+        <% } %>
+        
+	<% if(locals.raspuns) { %>
+	<%- locals.raspuns+"<br/>"%>
+	<% } %>
+	<% if(locals.err) { %>
+	<%- locals.err %>
+	<% } %>
+    </div>
+
+</main>
+
+<footer>
+    <%- include("../fragmente/footer") %>
+</footer>
+        </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Dobal Design realizează pe comandă obiecte de mobilier exact pe gustul dumneavoastră, cu livrare în țară și posibilitatea de plată online.">
+        <meta name="keywords" content="mobilă, lemn, lemn masiv, mahon, pin, cires, mesteacăn, arțar, brad, tec, stejar, dulap, pat, comodă, birou, grădină, măsuță de cafea, eucalipt, salcâm, foioase, dressing, PAL, MFA, comodă, raft, living, bucătărie">
+        <title>Dobal Design - home</title>
+        <%- include("../fragmente/head") %>     
+        <link href="/Resurse/CSS/produs.css" type="text/css" rel="stylesheet" />
+        
+    </head>
+    <body>
+        <div id="grad">
+    <%- include("../fragmente/header") %>
+    
+    <main>
+        <section>
+            <h2>Pagină produs</h2>
+                <article id="art-produs">
+                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                    <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                    <p>Înălțime produs: <span class="dimensiuni"><%- locals.prod.dimensiuni %> </span></p>
+                    <p>Culoare: <span class="culoare"><%- locals.prod.culoare %> </span></p>
+                    <p>Modulară: <span class="modulara"><%- locals.prod.modulara %> </span></p>
+                    <p>Material: <span class="material"><%- locals.prod.material %> </span></p>
+                    <p>Data adăugare: <span class="data"><%- locals.prod.data_adaugare %>
+                        <script>
+                        let d = locals.prod.data_adaugare;
+                        const month = ["Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie"];
+                        const weekday = ["Duminică","Luni","Marti","Miercuri","Joi","Vineri","Sâmbătă"];
+                        var data_n = d.getDate().toString() +"-"+ month[d.getMonth()]+ "-"+d.getFullYear().toString()+" ["+ weekday[d.getDate()]+"] "
+                        document.write(data_n);
+                    </script>
+                     </span></p>
+                    <figure class="imag-produs">
+                        <img  src="/Resurse/Imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                    </figure>    
+                </article>
+            
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+</div>
+    </body>
+</html>

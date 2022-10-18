@@ -1,0 +1,43 @@
+
+<div id="galerie-statica">
+    <% let anotimp = "";
+    d = new Date();
+     <!-- luna = d.getMonth(); -->
+    luna = 1;
+    if(luna < 2 || luna == 11)
+        anotimp = "iarna";
+    else 
+        if(luna >= 2 || luna < 5)
+            anotimp = "primavara";
+        else
+            if(luna >= 5 || luna < 8)
+                anotimp = "vara";
+            else
+                if(luna >= 8 || luna < 11)
+                    anotimp = "toamna";
+    %>
+    <% let nr = 0; %>
+    <% for (let imag of locals.imagini){ %>
+    <%
+        if(anotimp == imag.anotimp){
+            nr += 1;%>
+            <figure>
+            <picture>
+                <!-- dim diferite in fct de ecran-->
+                <source srcset="<%-imag.mic%>" media="(max-width:500px)" />
+                <source srcset="<%-imag.mediu%>" media="(max-width:700px)" />
+                <img src="<%-imag.mare %>" alt="<%- imag.titlu %>" />
+            </picture>
+
+            <figcaption> 
+                <%- imag.titlu %>
+                <br>
+                <small><em><%- imag.text_descriere %></em></small>
+            </figcaption>
+            </figure>
+            <% }
+        <!-- daca mai mult de 10 imagini se potrivesc criteriului, se trunchiaza la 10 -->
+        if(nr == 10)
+            break; %>
+        <% } %>
+</div> 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>Dobal Design </title>
+        <%- include("../fragmente/head") %>     
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+
+    <main>
+
+        <form id="sterge" method="post" action="/stergere">
+            <label>
+                Parola: <input id="parl" type="password" required  name="parola" value="">
+            </label>
+            
+            <input type="submit" value="Șterge">
+        </form>
+    Contul dvs va fi șters definitiv, dar îți poți crea oricând un cont nou!
+    <br><br>
+    Echipa <i>Dobal Design</i>
+    </main>
+
+<footer>
+    <%- include('../fragmente/footer') %>
+</footer>
+
+</body>
+</html>

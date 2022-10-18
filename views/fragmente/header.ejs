@@ -1,0 +1,94 @@
+<header>
+
+    Dobal<br>Design
+    
+    <!-- form autentificare -->
+     <% if(!locals.utilizator) { %>
+        <form id="form_inreg"  method="post" class="date"  action="/login"  enctype="multipart/form-data">
+        <p style="font-size: 25px; text-align:right;">
+            <label>
+                Username: <input type="text" name="username" id="inp-username" value="username<%= Math.floor(Math.random()*100000) %>" required pattern="[A-Za-z0-9]+">
+            </label>
+        </p>
+        <p style="font-size: 25px; text-align:right;">
+            <label>
+                Parola: <input id="parl" type="password" required  name="parola" value="">
+            </label>
+        </p>
+        <p style="font-size: 25px; text-align:right;">		
+            <!-- value= continutul mesajului care apare pe buton -->
+            <input type="submit" value="Conectează-te!">
+        </p>
+        </form>
+        <% } %>
+        <% if(locals.utilizator) { %>
+        <p style="font-size: 35px; font-weight:bold; text-align:right;">Bine ai venit, <%= locals.utilizator.username %>!
+        <a href="/logout"><i class="fa-solid fa-door-open" data-toggle="tooltip" title="Logout!"></i></a>
+        </p>
+        <% } %>
+
+</header>
+<nav>
+    <label id="hamburger" for="ch-menu">
+        <img src="Resurse/Imagini/Hamburger_icon_alb.png" alt="menu">
+    </label>
+
+    <input id="ch-menu" type="checkbox">
+
+    <!-- buton dark-light mode -->
+    <div id="btn">
+        <input type="checkbox" class="schimbare-tema" id="schimbare-tema" />
+        <label class="label" for="schimbare-tema">
+                      <i class="fas fa-moon"></i>
+                      <i class="fas fa-sun"></i>
+        <div class="cerc"></div>
+        </label>
+    </div>
+
+    <ul class="meniu">
+        <li><a  href="/index" id="casuta"><span id="icon" ><i class="fa-solid fa-house-user"></i></span><span id="textmeniu">Acasă</span></a>
+            <ul class="submeniu">
+                <li><a href="/index#despre_noi">Despre noi</a></li>
+                <li><a href="/index#intrebari">Întrebări</a></li>
+                <li><a href="/galerie">Galerie</a></li>
+            </ul>
+        </li>
+
+        <li><a href="/produse">Produse</a>
+            <ul class="submeniu">
+                <!-- <li><a href="/produse">Toate</a></li>
+                <li><a href="/produse?tip=living">Living</a></li>
+                <li><a href="/produse?tip=dormitor">Dormitor</a></li>
+                <li><a href="/produse?tip=bucatarie">Bucătărie</a></li>
+                <li><a href="/produse?tip=hol">Hol</a></li>
+                <li><a href="/produse?tip=gradina">Grădină</a></li> -->
+            </ul>
+
+        </li>
+        <li><a href="/index#tabel">Livrare</a></li>
+        <li><a href="/index#contact">Contact</a></li>
+        <li><a href="/inregistrare">Înregistrare</a></li>
+        <% if(locals.utilizator && locals.utilizator.rol=="admin") { %>
+            <li><a href="/useri">Useri</a></li>
+            <% } %>
+        <li><a href = "/cos_virtual">Cos</a></li>
+        <!-- chat-ul apare daca utilizatorul este logat -->
+        <% if(locals.utilizator) { %>
+            <li><a href="/chat">Chat</a></li>
+        <% } %>
+        <% if(!locals.utilizator) { %>
+            <li><a href="/chat_eroare">Chat</a></li>
+        <% } %>
+        <!-- dupa ce se logheaza, utilizatorul are o sectiune in meniu dedicata profilului sau -->
+        <% if(locals.utilizator) { %>
+            <li><div><%- locals.utilizator.username %><img src="<%-locals.utilizator.imagine%>"> </div>
+                <ul class="submeniu">
+                    <li> <a href="/profil">Profil</a></li>
+                    <li><a href="/logout">Logout</a></li>   
+                </ul>  
+            </li>
+            <li><a href="/contact">Comentarii</a></li>
+        <% } %>
+        <li><a href="/jucarii">Jucarii</a></li>
+    </ul>
+</nav>

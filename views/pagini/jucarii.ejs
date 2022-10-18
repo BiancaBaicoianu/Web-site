@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Dobal Design realizează pe comandă obiecte de mobilier exact pe gustul dumneavoastră, cu livrare în țară și posibilitatea de plată online.">
+        <meta name="keywords" content="mobilă, lemn, lemn masiv, mahon, pin, cires, mesteacăn, arțar, brad, tec, stejar, dulap, pat, comodă, birou, grădină, măsuță de cafea, eucalipt, salcâm, foioase, dressing, PAL, MFA, comodă, raft, living, bucătărie">
+        <link rel="stylesheet" href="/Resurse/CSS/jucarii.css" type="text/css" />
+        <title>Dobal Design</title>
+        <%- include("../fragmente/head") %>     
+        <script type="text/javascript" src=/Resurse/js/jucarii.js></script>
+
+    </head>
+    <body>
+        <div id="grad">
+    <%- include("../fragmente/header") %>
+
+    <main>
+        <label>Ascendent
+			<input id="ascendent" name="gr_rad" value="ascendent" type="radio"/>
+		</label>
+		<label>Descendent
+			<input id="descendent" name="gr_rad" value="descendent" type="radio"/>
+		</label>
+		<button id="sortare">Sortare</button> 
+        <label>Culoarea:
+            <select id="i_sel_simplu">
+                <option value="toate" selected id="sel-toate">toate</option>
+                <option value="rosu">rosu</option>
+                <option value="alb" >alb</option>
+                <option value="verde">verde</option>
+                <option value="galben">galben</option>
+                <option value="roz">roz</option>
+                <option value="albastru">albastru</option>
+                <option value="negru">negru</option>
+
+            </select>
+        </label>
+        <button id="filtrare">Filtrare</button>
+        <section id="produse">
+            <h2>Jucarii</h2>
+            <div class="grid-produse">
+                <% for( let jucarie of locals.jucarii) { %>
+                    <section class="produs" >
+                        <h2 class="nume">Id: <%- jucarie.id%>; Nume: <%- jucarie.nume%></h2>
+                        <p id="pret">Pret: <span class="val-pret"><%-jucarie.pret%></span></p>
+                        <p id="varsta">Varsta: <span class="val-varsta"><%-jucarie.varsta_minima%></span></p>
+                        <ol type="a" >
+                            <% for(let culoare of jucarie.culori) { %>
+                                <li class="val-culori"> <%-culoare %></li>
+                            <% } %>
+                        </ol>
+                        <p> <%- jucarie.culori.length %> culori </p>
+                        <% if(jucarie.varsta_minima < 2) {%>
+                            <p>Potrivit pentru bebeluși </p>
+                        <% } %>
+                    </section>
+
+                <% }%>
+            </div>
+        </section>
+         
+    </main>
+    <%- include("../fragmente/footer") %>
+        </div>
+    </body>
+</html>

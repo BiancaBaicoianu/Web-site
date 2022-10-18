@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Dobal Design realizează pe comandă obiecte de mobilier exact pe gustul dumneavoastră, cu livrare în țară și posibilitatea de plată online.">
+        <meta name="keywords" content="mobilă, lemn, lemn masiv, mahon, pin, cires, mesteacăn, arțar, brad, tec, stejar, dulap, pat, comodă, birou, grădină, măsuță de cafea, eucalipt, salcâm, foioase, dressing, PAL, MFA, comodă, raft, living, bucătărie">
+        <title>Dobal Design </title>
+        <lunk rel="stylesheet" type="text/css" href="Resurse/CSS/eroare.css"
+        <%- include("../fragmente/head.ejs");%>
+        
+    </head>
+    <body>
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <div id="err-coloane">
+            <section style="text-align:center">
+				<h2><%- locals.titlu %></h2>
+				<p><%- locals.text %></p>
+			</section>
+			<div id="err-imag">
+				<center><img height="400px" width="300px" margin-left="auto" margin-right="auto" src="<%- locals.imagine %>" />
+                </center>
+            </div>
+		</div>
+    </main>
+    
+    <%- include("../fragmente/footer.ejs");  %> 
+
+
+    </body>
+</html>
