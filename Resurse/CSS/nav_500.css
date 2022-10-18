@@ -1,0 +1,97 @@
+#hamburger{
+    display:block;
+}
+
+/* implicit meniul e ascuns*/
+ul.meniu{
+    display:none;
+    position:absolute;
+    width:100%;
+}
+
+/*aici facem vizibil meniul cand facem click pe hamburger-meniu*/
+#ch-menu:checked+ul.meniu{      /* '+' --> fratele imediat urmator*/
+    display: block;
+    z-index: 2;
+    position: relative;
+    transform-origin: 0 0;
+    /*animaria de aparitie a meniului hamburger */
+    animation-name: aparitie_meniu;
+    animation-iteration-count:1;
+    animation-duration:0.7s;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+/* #ch-menu:checked+ul.meniu>li>div,#ch-menu:checked+ul.meniu>li>a{
+    
+    z-index: 2;
+    position: relative;
+
+} */
+
+/*optiunile se intind pe toata latimea containerului*/
+nav ul.meniu li{
+    width:100%;
+}
+
+/*meniul sa vina deasupra continutul de mai jos, fara sa impinga continutul*/
+nav ul.meniu>li ul{
+    position:absolute;
+    width:100%;
+    z-index:200;
+    transform:scale(1,1);
+}
+
+/* #ch-menu:checked+ul.meniu>li ul>*{
+    position:relative;
+    z-index:200;
+} */
+
+nav ul.meniu>li:hover>ul{
+    
+    z-index:200;
+    animation:none;
+}
+
+ul.meniu>li::after{
+    display: block;
+    position: absolute;
+    opacity:0;
+    left: 0%;
+    transition: all 0.7s;
+    bottom:0%;
+    width: 100%;
+    height: 7px;
+    content: " ";
+    background-image: none;
+}
+
+ul.meniu>li a:hover{
+    background-color: var(--culoare-maro-inchis);
+    color: var(--culoare-maro-deschis);
+}
+
+ul.meniu>li:hover{
+    background-color: var(--culoare-maro-inchis);
+    color: var(--culoare-maro-deschis);
+}
+
+ul.meniu>li>ul>li a:hover{
+    background-color: var(--culoare-maro-inchis);
+    color: var(--culoare-maro-deschis);
+}
+
+/* meniul se va roti dupa axa Z, venind din stanga sus pana in pozitia normala */
+@keyframes aparitie_meniu{
+    0%{
+        opacity:0;
+        transform:rotateZ(-180deg);
+    } 
+    
+	100%{
+        transform: rotateZ(0deg);
+    	opacity:1;
+    }
+
+}
+

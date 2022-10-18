@@ -1,0 +1,27 @@
+@media only screen and (max-width: 500px) {
+    #grid-pagina {
+        display: block;
+
+        /* padding:var(--padding-intern); */
+    }
+        /* grid-gap:2rem; */
+
+html{
+    font-size:11px;
+}
+
+body{
+    --body-padding:0px;
+    
+}
+h1{
+    text-align: center;
+}
+
+
+.tabs a{
+    text-decoration:none;
+    width:75px;
+}
+
+}

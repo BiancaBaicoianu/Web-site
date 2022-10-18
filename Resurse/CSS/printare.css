@@ -1,0 +1,168 @@
+@media print {
+	/* banner */
+	#absolut{
+		position: absolute;
+		display: flex;
+		bottom: 0;
+		width:70%;
+		left: 15%;
+		right: 15%;
+		height:25px;
+		justify-content: center;
+	}
+
+	#absolut::after{
+		content:"Acesta este un proiect școlar.";
+		position: absolute;
+		bottom: 0;
+		margin: auto;
+		font-size:20px;
+		border:4px inset black;
+		text-align: center;
+		height:40px;
+		display: inline-block;
+	}
+	header{
+		text-align:center;
+	}
+	#grid-pagina{
+        display: block;
+		page-break-before: always;
+		background-color: white;
+    }
+
+	/* html, body {
+        width: 210mm;
+     	overflow:visible !important;
+		} */
+
+	/* watermark cu numele meu */
+	#watermark
+	{
+		display: block;
+		/*ca sa apara pe fiecare pagina*/
+		position: fixed;
+		color:rgba(0,0,0,0.4);
+		bottom:0;
+		height: 1cm;
+		width: 4cm;
+		right:0;
+	}
+	#watermark::after{	
+		opacity:0.4;
+		padding:5px;
+		display: block;
+		background: white;
+		border:3px solid black;
+		border-radius:5px;
+		text-align: center;
+		font-weight: bold;
+		content:"Baicoianu \a Alexandra-Bianca"; 	/*numele și prenumele sa apara pe randuri diferite*/
+		overflow:hidden;
+		white-space: pre;
+	}
+	nav ul.meniu ul{
+		all:unset;
+		display: list-item;
+	}
+	nav .meniu{
+		all:unset;
+		/*optiunile din meniu sa fie sub forma unei liste nordonate*/
+		display: list-item;
+		page-break-after: always;
+	}
+	nav ul.meniu>li{
+		all:unset;
+		display: list-item;
+	}
+	nav ul.meniu{
+		all:unset;
+		display: list-item;
+	}
+	nav ul.meniu li{
+		all:unset;
+		display: list-item;
+	}
+	nav ul.meniu li a{
+		all:unset;
+		display: list-item;
+	}
+	nav ul.meniu li div{
+		all:unset;
+		display: list-item;
+	}
+	nav ul.meniu>li>ul{
+		display: none;
+	}
+	#icon{
+		display:none;
+	}
+	footer{
+		page-break-before: always;
+	}
+	iframe{
+		display:none;
+		border:none;
+	}
+	.ifrVideos{
+		display:none;
+		border:none;
+	}
+	.tabs{
+		display:none;
+		border:none;
+	}
+	video{
+		display:none;
+	}	
+	#link-top{
+		display:none;
+		box-shadow: none;
+	}
+	#triunghi{
+		display:none;
+	}
+	#galerie-statica{
+		display:none;
+	}
+	#favorite{
+		display:none;
+	}
+	#galerie-animata{
+		display:none;
+	}
+	figcaption{
+		display:none;
+	}
+	figure{
+		display:none;
+	}
+	hr{
+		display:none;
+	}
+	a, a:visited {
+		text-decoration: none;
+	}
+	#btn_tema{
+		display: none;
+	}
+	#form_inreg{
+		display:none;
+	}
+	@page {
+		size: A4 portrait;
+		margin-bottom:2cm;
+		margin-top:2cm;
+		counter-increment: page;	
+	}
+	@page:left{
+		margin-left:3cm;
+		margin-right:1cm;
+	}
+	@page:right{
+		margin-right:3cm;
+		margin-left:1cm;
+	}
+}
+
+

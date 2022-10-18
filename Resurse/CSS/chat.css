@@ -1,0 +1,17 @@
+
+
+main{
+	padding-top:100px;
+	padding-left:5%;
+	padding-right:5%;
+}
+
+#mesaje_chat{
+	border:2px solid black;
+	height:300px;
+	overflow:auto;
+	width:700px;
+	background-image: url("/Resurse/Imagini/chat_background.jpg");
+	opacity: 0.6;
+}
+

@@ -1,0 +1,98 @@
+main{
+    --padd-main:1rem;
+    padding-left:var(--padd-main);
+    padding-right:var(--padd-main);
+}
+
+.grid-produse{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
+}
+.grid-produse .produs{
+    border-radius: 2rem;
+    box-shadow: 0px 0px 0.8rem 0.3rem grey;
+    overflow: hidden;
+}
+
+.grid-produse .produs h3{
+    background-color: var(--culoare-maro-inchis);
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.grid-produse .produs h3 a{
+    color:black;
+    text-decoration: none;
+}
+.grid-produse .produs h3 a:hover{
+    color:white;
+}
+.grid-produse .produs figure{
+    text-align: center;
+}
+.grid-produse .produs .info-prod{
+    display: grid;
+    grid-template-areas: "categorie infos" 
+                         "imag_produs  infos"
+                         "descriere  infos";
+    grid-gap:1rem;
+}
+#categorie{
+    grid-area: categorie;
+}
+#imag_produs{
+    grid-area: imag_produs;
+}
+#descriere{
+    grid-area: descriere;
+}
+#infos{
+    grid-area: infos;
+}
+.grid-produse .produs .info-prod p{
+    text-align:center;
+    font-weight:bold;
+}
+.info-prod{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.info-produs{
+    background-color: var(--culoare-maro-deschis);
+    padding:0.2rem;
+    box-shadow: 0px 0px 0.5rem 0.15rem grey;
+}
+
+.produs{
+    position: relative;
+}
+
+.val-categorie, .val-descriere, .val-dimensiune, .val-pret, .val-culoare, .val-material, .val-modulara, .data_adaugare{
+    color: white;
+}
+
+.selecteaza-cos{
+    display: inline-block;
+    background-color: var(--culoare-maro-deschis);
+    position:absolute;
+    bottom:0.5rem;
+    right:0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    border:1px solid transparent;
+    /* height: 50px;
+    width: 70px; */
+}
+.selecteaza-cos img{
+    left: 10px;
+    width: 30px;
+    height: auto;
+}
+.selecteaza-cos:hover{
+    background-color: var(--culoare-maro-inchis);
+    color: var(--culoare-maro-deschis);
+    border:1px solid  var(--culoare-maro);
+}

@@ -1,0 +1,40 @@
+#banner{
+    position:fixed;
+    width:100%;
+    padding:0;
+    background-color: var(--culoare-fundal1);
+    background-size: cover;
+    left:0px;
+    text-align:center;
+    color:black;
+    border-color: black;
+    height: 50px;
+    bottom:-50px;
+    position: fixed;
+    visibility:hidden;
+    z-index:15;
+    animation-name: aparitie;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-delay:0.5s;
+}
+
+
+
+@keyframes aparitie {
+    0%{
+        background-color: var(--culoare-maro-inchis);
+        border-color:beige;
+        visibility: visible;
+    }
+    50%{
+        background-color: beige;
+        border-color: var(--culoare-maro-inchis);
+        visibility: visible;
+    }
+    100%{
+        background-color: var(--culoare-maro-inchis);
+        border-color:beige;
+        visibility: visible;
+    }
+}

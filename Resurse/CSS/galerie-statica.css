@@ -1,0 +1,124 @@
+#galerie-statica{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+/*crearea grid-ului cerut pentru galerie*/
+#galerie-statica figure:nth-child(1){
+  grid-area: 1/1/2/2;
+}
+
+#galerie-statica figure:nth-child(2){
+  grid-area: 1/2/3/3;
+}
+
+#galerie-statica figure:nth-child(3){
+  grid-area: 1/3/4/4;
+}
+
+#galerie-statica figure:nth-child(4){
+  grid-area: 2/1/2/2;
+}
+
+#galerie-statica figure:nth-child(5){
+  grid-area: 2/3/2/3;
+}
+
+#galerie-statica figure:nth-child(6){
+  grid-area: 3/1/3/2;
+}
+
+#galerie-statica figure:nth-child(7){
+  grid-area: 3/2/3/3;
+}
+
+#galerie-statica figure:nth-child(8){
+  grid-area: 3/3/4/3;
+}
+
+#galerie-statica figure:nth-child(9){
+  grid-area: 4/1/4/2; 
+}
+
+#galerie-statica figure:nth-child(10){
+  grid-area: 4/3/4/3;
+}
+
+#galerie-statica img{
+  width: 100%;
+  transition: all 0.125s;
+  opacity: 1;
+}
+
+/*cand ajungem cu cursorul pe imagine, scalam cu 40% fata de partea de centru sus + opacitate + colturi rotunjite*/
+#galerie-statica img:hover{
+  transform: scale(1.4);
+  transform-origin: top center;
+  opacity: 0.5;
+  border-radius: 15px;
+}
+
+/*counter, litere romane mici urmate de .*/
+#galerie-statica figcaption{
+  counter-increment: nrimag; 
+}
+#galerie-statica figcaption::before{
+  content: counter(nrimag, lower-roman) ". ";
+
+}
+
+@media screen and (max-width:1000px){
+  #galerie-statica {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap:5px;
+    grid-column-gap:5px;
+    }
+
+     #galerie-statica figure:nth-child(1){
+      grid-area: 1/1/2/2;
+    }
+    
+    #galerie-statica figure:nth-child(2){
+      grid-area: 1/2/3/3;
+    }
+    
+    #galerie-statica figure:nth-child(3){
+      grid-area: 2/1/2/2;
+    }
+    
+    #galerie-statica figure:nth-child(4){
+      grid-area: 2/2/3/3;
+    }
+    
+    #galerie-statica figure:nth-child(5){
+      grid-area: 3/1/3/2;
+    }
+    
+    #galerie-statica figure:nth-child(6){
+      grid-area: 3/2/3/3;
+    }
+    
+    #galerie-statica figure:nth-child(7){
+      grid-area: 4/1/5/2;
+    }
+    
+     #galerie-statica figure:nth-child(8){
+      grid-area: 4/2/5/3;
+    }
+    
+    #galerie-statica figure:nth-child(9){
+      grid-area: 5/1/6/2; 
+    }
+    
+    #galerie-statica figure:nth-child(10){
+      grid-area: 5/2/6/3;
+    }
+}
+
+@media screen and (max-width:500px){
+  #galerie-statica {
+      display:block;
+  }
+}

@@ -1,0 +1,7 @@
+@media screen and (max-width: 1000px){
+  /*inlocuim "Acasa" cu iconul de căsuță*/  
+  #textmeniu{
+      display:none;
+    }
+    
+}
